@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Flood Risk</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="result-card safe">
+
+        <h1>✅ Safe Zone</h1>
+
+        <h2>No Flood Risk Detected</h2>
+
+        <p>
+            The machine learning model predicts that there is
+            <strong>no significant chance of flooding</strong>
+            based on the provided weather conditions.
+        </p>
+
+        <p>
+            Continue monitoring weather updates and maintain
+            normal safety precautions.
+        </p>
+
+        <a href="/predict" class="btn">
+            Predict Again
+        </a>
+
+        <a href="/" class="btn secondary">
+            Home
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

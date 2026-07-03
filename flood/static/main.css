@@ -1,0 +1,452 @@
+/* ===========================================
+   GOOGLE FONT
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================================
+   RESET
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f4c81,#4facfe,#00c6fb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* ===========================================
+   MAIN CONTAINER
+=========================================== */
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ===========================================
+   CARD DESIGN
+=========================================== */
+
+.card,
+.result-card{
+
+    width:900px;
+    max-width:100%;
+
+    background:rgba(255,255,255,0.95);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    backdrop-filter:blur(8px);
+
+    animation:fadeIn .7s ease;
+}
+
+/* ===========================================
+   ANIMATION
+=========================================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================================
+   HEADINGS
+=========================================== */
+
+h1{
+
+    text-align:center;
+
+    color:#1565C0;
+
+    font-size:38px;
+
+    margin-bottom:12px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+}
+
+/* ===========================================
+   FORM GRID
+=========================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+}
+
+/* ===========================================
+   INPUTS
+=========================================== */
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.input-group label{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#333;
+}
+
+.input-group input{
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+
+    transition:.3s;
+
+    background:#fafafa;
+}
+
+.input-group input:focus{
+
+    outline:none;
+
+    border-color:#1565C0;
+
+    box-shadow:0 0 10px rgba(21,101,192,.25);
+
+    background:white;
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+.button-area{
+
+    text-align:center;
+
+    margin-top:35px;
+}
+
+.predict-btn,
+.btn{
+
+    padding:14px 40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1565C0;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    text-decoration:none;
+
+    display:inline-block;
+
+    margin:8px;
+}
+
+.predict-btn:hover,
+.btn:hover{
+
+    background:#0D47A1;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.secondary{
+
+    background:#607D8B;
+}
+
+.secondary:hover{
+
+    background:#455A64;
+}
+
+/* ===========================================
+   RESULT PAGE
+=========================================== */
+
+.result-card{
+
+    text-align:center;
+}
+
+.result-card h1{
+
+    font-size:40px;
+
+    margin-bottom:20px;
+}
+
+.result-card h2{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+}
+
+.result-card p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#444;
+
+    margin-bottom:15px;
+}
+
+/* ===========================================
+   SUCCESS & DANGER
+=========================================== */
+
+.safe{
+
+    border-top:8px solid #2E7D32;
+}
+
+.safe h1{
+
+    color:#2E7D32;
+}
+
+.danger{
+
+    border-top:8px solid #D32F2F;
+}
+
+.danger h1{
+
+    color:#D32F2F;
+}
+
+/* ===========================================
+   TABLE (Optional)
+=========================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:25px;
+}
+
+table th,
+table td{
+
+    border:1px solid #ddd;
+
+    padding:12px;
+
+    text-align:center;
+}
+
+table th{
+
+    background:#1565C0;
+
+    color:white;
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:768px){
+
+    body{
+
+        padding:20px;
+    }
+
+    .grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .card,
+    .result-card{
+
+        padding:25px;
+    }
+
+    h1{
+
+        font-size:30px;
+    }
+
+    .subtitle{
+
+        font-size:16px;
+    }
+
+    .predict-btn,
+    .btn{
+
+        width:100%;
+    }
+
+}
+
+/* ===========================================
+   HOME PAGE
+=========================================== */
+
+body.home-page{
+
+    margin:0;
+    padding:0;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1527489377706-5bf97e608852?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.home-container{
+
+    width:70%;
+    max-width:900px;
+
+    background:rgba(255,255,255,.95);
+
+    padding:45px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    animation:fadeIn .7s ease;
+}
+
+.home-container h1{
+
+    font-size:42px;
+
+    color:#1565C0;
+
+    margin-bottom:15px;
+}
+
+.home-container h3{
+
+    font-size:26px;
+
+    color:#333;
+
+    margin-bottom:20px;
+}
+
+.home-container p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:30px;
+}
+
+.start-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#1565C0;
+
+    color:white;
+
+    padding:15px 40px;
+
+    border-radius:10px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.start-btn:hover{
+
+    background:#0D47A1;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
